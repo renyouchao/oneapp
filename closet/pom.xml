@@ -16,7 +16,7 @@
 		<spring-data-jpa.version>1.5.0.RELEASE</spring-data-jpa.version>
 		<hibernate.version>4.3.1.Final</hibernate.version>
 		<aspectj.version>1.7.2</aspectj.version>
-		<mysql.version>5.1.26</mysql.version>
+		<mysql.version>5.1.29</mysql.version>
 		<jackson-json.version>2.3.1</jackson-json.version>
 		<commons-dbcp.version>1.4</commons-dbcp.version>
 		<commons-lang3.version>3.1</commons-lang3.version>
@@ -33,16 +33,10 @@
 			<artifactId>slf4j-api</artifactId>
 			<version>${slf4j.version}</version>
 		</dependency>
-
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-log4j12</artifactId>
 			<version>${slf4j.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>ch.qos.logback</groupId>
-			<artifactId>logback-classic</artifactId>
-			<version>${logback.version}</version>
 		</dependency>
 		<!-- Spring dependencies -->
 		<dependency>
@@ -56,12 +50,21 @@
 			</exclusions>
 		</dependency>
 		<dependency>
+			<groupId>org.aspectj</groupId>
+			<artifactId>aspectjweaver</artifactId>
+			<version>1.7.4</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+		</dependency>
+		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
-			<artifactId>spring-test</artifactId>
+			<artifactId>spring-context</artifactId>
 		</dependency>
 		<!-- Spring Data JPA dependencies -->
 		<dependency>
@@ -101,6 +104,17 @@
 			<groupId>javax.mail</groupId>
 			<artifactId>mail</artifactId>
 			<version>1.4.3</version>
+		</dependency>
+		<!-- nosql -->
+		<dependency>
+			<groupId>com.google.code.simple-spring-memcached</groupId>
+			<artifactId>simple-spring-memcached</artifactId>
+			<version>3.3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.simple-spring-memcached</groupId>
+			<artifactId>spymemcached-provider</artifactId>
+			<version>3.3.0</version>
 		</dependency>
 		<!-- Servlet -->
 		<dependency>
