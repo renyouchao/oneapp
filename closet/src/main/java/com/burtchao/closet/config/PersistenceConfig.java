@@ -33,7 +33,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @Configuration
 @EnableTransactionManagement
-@PropertySource(value = { "classpath:application.properties" })
+@PropertySource(value = { "propertyConfigurer" })
 @EnableJpaRepositories(basePackages="com.burtchao.closet.repositories")
 public class PersistenceConfig 
 {
