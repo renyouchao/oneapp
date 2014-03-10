@@ -10,15 +10,17 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 /**
  * @author renyouchao
  * @since 1.0.0
  */
-@Entity(name="tb_account")
+@Entity
+@Table(name = "tb_user")
 public class Account {
+	
 	@Id
-	@GeneratedValue(strategy=GenerationType.AUTO)
 	private Long id;
 	/**用户姓名 **/
 	private String userName;
