@@ -6,18 +6,20 @@ package com.burtchao.closet.entities;
 
 import java.util.Date;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Table;
+
+import org.springframework.data.mongodb.core.index.CompoundIndex;
+import org.springframework.data.mongodb.core.index.CompoundIndexes;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 /**
  * @author renyouchao
  * @since 1.0.0
  */
-@Entity
-@Table(name = "tb_user")
+@Document
+@CompoundIndexes({
+    @CompoundIndex(name = "login_idx", def = "{'accName': 1, 'passwd': 1, 'isEn' : 1}")
+})
 public class Account {
 	
 	@Id

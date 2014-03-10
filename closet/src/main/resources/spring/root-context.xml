@@ -39,7 +39,8 @@
 
 	<!-- spring data mongodb -->
 	<mongo:mongo host="${mongo.host}" port="${mongo.port}">
-		<mongo:options connections-per-host="${mongo.connectionsPerHost}"
+		<mongo:options
+			connections-per-host="${mongo.connectionsPerHost}"
 			threads-allowed-to-block-for-connection-multiplier="${mongo.threadsAllowedToBlockForConnectionMultiplier}"
 			connect-timeout="${mongo.connectTimeout}" 
 			max-wait-time="${mongo.maxWaitTime}"
@@ -52,7 +53,7 @@
 			write-fsync="true" />
 	</mongo:mongo>
 
-	<mongo:db-factory dbname="database" mongo-ref="mongo" />
+	<mongo:db-factory dbname="zeus" mongo-ref="mongo" />
 
 	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
 		<constructor-arg name="mongoDbFactory" ref="mongoDbFactory" />
