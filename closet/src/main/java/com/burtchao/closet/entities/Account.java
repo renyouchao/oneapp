@@ -24,8 +24,6 @@ public class Account {
 	
 	@Id
 	private Long id;
-	/**用户姓名 **/
-	private String userName;
 	/**账号**/
 	private String accName;
 	/**密码**/
@@ -51,18 +49,6 @@ public class Account {
 	 */
 	public void setId(Long id) {
 		this.id = id;
-	}
-	/**
-	 * @return the userName
-	 */
-	public String getUserName() {
-		return userName;
-	}
-	/**
-	 * @param userName the userName to set
-	 */
-	public void setUserName(String userName) {
-		this.userName = userName;
 	}
 	/**
 	 * @return the accName
